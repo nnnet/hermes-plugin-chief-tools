@@ -1,0 +1,15 @@
+name: chief-tools
+kind: standalone
+version: 0.1.0
+description: |
+  Dynamic spawn / monitor / terminate of project-chief sub-agents.
+  Provides 8 tools that let a main:manager (or another chief) delegate
+  a complex long-running project to a dedicated worker process with
+  its own kanban board:
+   * chief_spawn / chief_status / chief_list / chief_terminate
+   * chief_answer_question (operator → chief reply)
+   * tg_send / tg_ask / tg_ask_status (chief ↔ operator over Telegram)
+  Lifecycle: cascade by default (terminating a chief recursively
+  terminates sub-chiefs); 'independent' mode planned for Phase 2.
+author: nnnet/AiManager
+repo: https://github.com/nnnet/hermes-plugin-chief-tools
